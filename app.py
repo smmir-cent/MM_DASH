@@ -1,7 +1,7 @@
 import time
 from flask import Flask, jsonify, render_template
 import sqlite3
-import sys, os
+
 
 def get_db_connection():
     conn = sqlite3.connect('movies.db')
@@ -27,16 +27,15 @@ def index():
     return render_template('index.html', posts=posts)
 
 
+@app.route('/api/movies/<id>', methods=['GET'])
+def movie(id):
+    conn = get_db_connection()
+    posts = conn.execute('SELECT * FROM movies where id='+str(id)).fetchall()
+    conn.close()
+    return render_template('movie.html', posts=posts)
+
+
+
+
 if __name__ == "__main__":
-    for path, subdirs, files in os.walk("."):
-        for name in files:
-            print(os.path.abspath(os.path.join(path, name)))    
-
-
-
-    if os.path.exists("/app/templates/assets/12_Angry_Men.jpg"):
-        print("------------------------------------------------------")
-    else:
-        print("*******************************************************")
-
     app.run(host= '0.0.0.0', port=8000)

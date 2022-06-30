@@ -18,15 +18,9 @@
                 <h2>{{ post['name'] }}</p>
                 <h3>{{ post['director_name'] }}</h2>
                 <h4>{{ post['score'] }}</p>
-                <img id="{{ post['id'] }}" src="{{ post['image_path'] }}" alt="Forest" style="width:77%" onclick="The_Godfather('2')">
-                <script>
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","The_Shawshank_Redemption('1')")
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","The_Godfather('2')")
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","The_Dark_Knight('3')")
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","The_Godfather_PartII('4')")
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","Angry_Men('5')")
-                    document.getElementById("{{ post['id'] }}").setAttribute("onclick","Schindler_List('6')")
-                </script>
+                  <a href="./{{ post['id'] }}">
+                <img id="{{ post['id'] }}" src="{{ post['image_path'] }}" alt="Forest" style="width:77%" href="./{{ post['id'] }}">
+                  </a>
                 <p>{{ post['description'] }}</p>
               </div>
         </div>
