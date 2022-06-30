@@ -22,7 +22,7 @@ INSERT INTO movies VALUES (2, "The Godfather", "link", "assets/The_Godfather.jpg
 INSERT INTO movies VALUES (3, "The Dark Knight", "link", "assets/The_Dark_Knight.jpg","Christopher Nolan",9,"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.");
 INSERT INTO movies VALUES (4, "The Godfather Part II", "link", "assets/The_Godfather_PartII.jpg","Francis Ford Coppola",9,"The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.");
 INSERT INTO movies VALUES (5, "12 Angry_Men", "link", "assets/12_Angry_Men.jpg","Sidney Lumet",9,"The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.");
-INSERT INTO movies VALUES (6, "Schindler's List", "link", "assets/Schindler's_List.jpg","Steven Spielberg",9,"In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.");
+INSERT INTO movies VALUES (6, "Schindler's List", "link", "assets/Schindlers_List.jpg","Steven Spielberg",9,"In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.");
 ```
 
   
@@ -31,6 +31,6 @@ INSERT INTO movies VALUES (6, "Schindler's List", "link", "assets/Schindler's_Li
 
 ```sh
 git clone https://github.com/smmir-cent/MM_DASH.git
-docker-compose up
+docker-compose up --build
 curl localhost:3000
 ```
