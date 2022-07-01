@@ -13,13 +13,11 @@
     function playVid(id){
         switch(id) {
             case "1":
-                console.log("111111111");
                 var url = "/dash/1/The_Shawshank_Redemption_dash.mpd";
                 var player = dashjs.MediaPlayer().create();
                 player.initialize(document.querySelector("#videoPlayer_1"), url, true);
                 break;
             case "2":
-                console.log("222222222");
                 var url = "/dash/2/The_Godfather_dash.mpd";
                 var player = dashjs.MediaPlayer().create();
                 player.initialize(document.querySelector("#videoPlayer_2"), url, true);
@@ -55,9 +53,6 @@
             </div>
     {% endfor %}
         </div>
-        
-        <!-- <script src="Front/myscripts.js"></script> -->
-
 </body>
 
 </html>

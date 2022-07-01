@@ -12,6 +12,8 @@ Multimedia Systems project
 ```sh
 sudo apt update
 sudo apt install sqlite3
+pip3 install python-ffmpeg-video-streaming
+python3 chunkCreator.py
 sqlite3 movies.db
 ```
 
