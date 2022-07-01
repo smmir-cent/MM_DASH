@@ -23,15 +23,21 @@
                 player.initialize(document.querySelector("#videoPlayer_2"), url, true);
                 break;
             case "3":
-            // code block
+                var url = "https://mmproject.arvanvod.com/Y6zM6ZM8qN/2RNGRPwMay/h_,144_200,240_400,360_800,480_1469,k.mp4.list/manifest.mpd";
+                var player = dashjs.MediaPlayer().create();
+                player.initialize(document.querySelector("#videoPlayer_3"), url, true);                
                 break;
             case "4":
-            // code block
+                var url = "https://mmproject.arvanvod.com/Y6zM6ZM8qN/jzgNW0a9BV/h_,144_200,240_400,360_800,480_1500,k.mp4.list/manifest.mpd";
+                var player = dashjs.MediaPlayer().create();
+                player.initialize(document.querySelector("#videoPlayer_4"), url, true);                 
                 break;
             case "5":
+                // HLS: https://mmproject.arvanvod.com/Y6zM6ZM8qN/xj4poEKqm5/h_,144_200,240_400,360_800,480_1500,k.mp4.list/master.m3u8
             // code block
                 break; 
             case "6":
+                // HLS: https://mmproject.arvanvod.com/Y6zM6ZM8qN/3qybkYoBkl/h_,144_200,240_400,360_800,480_1458,k.mp4.list/master.m3u8
             // code block
                 break;                                                            
         }
