@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Front/style.css" />
 </head>
 <script src="Front/dash.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
 <script>
     function playVid(id){
         switch(id) {
@@ -33,12 +34,29 @@
                 player.initialize(document.querySelector("#videoPlayer_4"), url, true);                 
                 break;
             case "5":
+                
                 // HLS: https://mmproject.arvanvod.com/Y6zM6ZM8qN/xj4poEKqm5/h_,144_200,240_400,360_800,480_1500,k.mp4.list/master.m3u8
+                var video = document.querySelector('#videoPlayer_5');
+                var videoSrc = 'https://mmproject.arvanvod.com/Y6zM6ZM8qN/xj4poEKqm5/h_,144_200,240_400,360_800,480_1500,k.mp4.list/master.m3u8';
+                if (Hls.isSupported()) {
+                    var hls = new Hls();
+                    hls.loadSource(videoSrc);
+                    hls.attachMedia(video);
+                }
+                // else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                //   video.src = videoSrc;
+                // }                
             // code block
                 break; 
             case "6":
                 // HLS: https://mmproject.arvanvod.com/Y6zM6ZM8qN/3qybkYoBkl/h_,144_200,240_400,360_800,480_1458,k.mp4.list/master.m3u8
-            // code block
+                var video = document.querySelector('#videoPlayer_6');
+                var videoSrc = 'https://mmproject.arvanvod.com/Y6zM6ZM8qN/3qybkYoBkl/h_,144_200,240_400,360_800,480_1458,k.mp4.list/master.m3u8';
+                if (Hls.isSupported()) {
+                    var hls = new Hls();
+                    hls.loadSource(videoSrc);
+                    hls.attachMedia(video);
+                }
                 break;                                                            
         }
     };
